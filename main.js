@@ -10,3 +10,4 @@ hero.addEventListener("click", () => {
   console.log("They clicked the hero!");
   hero.classList.toggle("active");
 });
+
