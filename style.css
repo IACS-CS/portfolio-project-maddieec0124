@@ -1,55 +1,122 @@
-/* There's some sample CSS here which you can use or nuke as you like */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
 
+/* Reset and Base Styles */
 html {
-  /* Make #id links scroll smoothly */
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  /* Change to something you like, but please do customize the font! */
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  line-height: 1.4;
-  /* reset default margins */
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+h1 {
+    font-size: 50px;
+}
+
+/* Hero Section */
 .hero {
-  box-sizing: border-box;
-  /* Full screen hero section */
-  width: 100%;
-  height: 100dvh;
-  /* Center the content vertically and horizontally */
-  display: grid;
-  place-content: center;
-  /* Custom text and stuff */
-  background: #0033a0;
-  color: white;
-  font-family: Futura;
-  font-weight: bold;
-  font-size: 70px;
-  text-align: center;
-}
-.hero a {
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: #c6093b;
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    place-content: center;
+    background: #323b2d;
+    color: white;
+    text-align: center;
+    font-family: Futura;
+    font-weight: bold;
+    font-size: 55px;
 }
 
-/* A little "activation" to demonstrate JS is working in the template */
-.hero {
-  transition: background 0.5s;
-}
-.hero.active {
-  background: #c6093b;
-}
-
+/* Main Content */
 main {
-  /* Make sure our content can scroll the hero away */
-  min-height: 100dvh;
-  max-width: 35em; /* choose a width for text */
-  line-height: 1.8; /* choose a line spacing */
-  font-size: 18px; /* choose a font size */
-  margin: 0 auto; /* center the content */
+    min-height: 100vh;
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-me {
+    flex: 1;
+}
+
+.about-photo {
+    flex: 1;
+    text-align: center;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators label {
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-indicators label:hover {
+    background: white;
+}
+
+/* Animating Carousel with Radio Buttons */
+#radio1:checked ~ .carousel-images {
+    transform: translateX(0);
+}
+
+#radio2:checked ~ .carousel-images {
+    transform: translateX(-100%);
+}
+
+#radio3:checked ~ .carousel-images {
+    transform: translateX(-200%);
+}
+
+/* Indicator Styling for Active State */
+#radio1:checked ~ .carousel-indicators label:nth-child(1),
+#radio2:checked ~ .carousel-indicators label:nth-child(2),
+#radio3:checked ~ .carousel-indicators label:nth-child(3) {
+    background: white;
 }
