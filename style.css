@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
 /* Reset and Base Styles */
 html {
     scroll-behavior: smooth;
@@ -39,13 +41,22 @@ h1 {
     font-size: 55px;
 }
 
-p{
-    margin-left: 35%;
-}
+
 
 h2{
-    margin-left: 35%;
+     transition: text-shadow 0.3s ease-in-out;
+     font-family: "Meddon", serif;
+ font-size: 50px;
+ max width: 200px;
+ padding: 10px;
 }
+p, h2 {
+    margin: 15px;     
+    padding: 0;
+    position: relative;
+    left: 80px;
+}
+
 
 /* Main Content */
 main {
@@ -151,8 +162,10 @@ main {
     justify-content: space-between;
 }
 .projects-section {
-    width: 90%; 
-    margin-top: 2rem;
+    position: absolute;
+    width: 60%; 
+    margin-top: 70rem;
+    margin-left: 15%;
     text-align: center;
     padding: 1rem;
     background-color: #f0f0f0;
@@ -161,12 +174,13 @@ main {
     
 }
 
-.projects-section h2 {
+.projects-section h3 {
     font-family: "Bodoni Moda SC", serif;
     font-size: 2.5rem;
     color: #323b2d;
     margin-left:auto; 
     transition: text-shadow 0.3s ease;
+   
     
 }
 .project-links {
@@ -178,19 +192,20 @@ main {
 
 .project-links a {
     text-decoration: underline;
-    color: #323b2d; /* Matches your color palette */
+    color: #323b2d; 
     font-size: 1.2rem;
     font-weight: 600;
-    padding: 0.5rem 1rem; /* Adds padding for clickable area */
+    padding: 0.5rem 1rem; 
     border-radius: 10px;
-    text-align: center; /* Centers the text inside the links */
-    transition: all 0.3s ease; /* Adds smooth hover effect */
+    text-align: center; 
+    transition: all 0.3s ease;
+    width: 50%;
+    margin-left: 24%;
+    
 }
 
 .project-links a:hover {
-    background-color: #323b2d; /* Dark background on hover */
-    color: white; /* Contrasting text color on hover */
+    background-color: #323b2d; 
+    color: white; 
 }
-.projects-section h2.glow {
-    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; /* Glowing pink color */
-}
+

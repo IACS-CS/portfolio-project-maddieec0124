@@ -1,27 +1,20 @@
-// Write JavaScript here.
-console.log("main.js loaded successfully!");
+// Get all h2 elements on the page
+const h3Elements = document.querySelectorAll('h3');
 
-/* Some sample JavaScript: this just listens 
-for any "click" on the hero element and then
-toggles the "active" class which we use to
-shift colors when they click */
-let hero = document.querySelector(".hero");
-hero.addEventListener("click", () => {
-  console.log("They clicked the hero!");
-  hero.classList.toggle("active");
+// Add event listeners for each h2 element
+h3Elements.forEach((h3) => {
+    // When mouse is over the h2 element
+    h3.addEventListener('mouseover', () => {
+        h3.style.textShadow = '0 0 10px #778769, 0 0 20px #778769, 0 0 30px #778769';
+    });
+
+    // When mouse leaves the h2 element
+    h3.addEventListener('mouseout', () => {
+        h3.style.textShadow = 'none';
+    });
 });
 
-<script>
-    // Get the Projects header element
-    const projectsHeader = document.querySelector('.projects-section h2');
+console.log("main.js loaded successfully!");
 
-    // Add the glow effect on mouseenter
-    projectsHeader.addEventListener('mouseenter', () => {
-        projectsHeader.classList.add('glow');
-    });
 
-    // Remove the glow effect on mouseleave
-    projectsHeader.addEventListener('mouseleave', () => {
-        projectsHeader.classList.remove('glow');
-    });
-</script>
+
