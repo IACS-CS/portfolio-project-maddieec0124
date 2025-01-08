@@ -11,3 +11,17 @@ hero.addEventListener("click", () => {
   hero.classList.toggle("active");
 });
 
+<script>
+    // Get the Projects header element
+    const projectsHeader = document.querySelector('.projects-section h2');
+
+    // Add the glow effect on mouseenter
+    projectsHeader.addEventListener('mouseenter', () => {
+        projectsHeader.classList.add('glow');
+    });
+
+    // Remove the glow effect on mouseleave
+    projectsHeader.addEventListener('mouseleave', () => {
+        projectsHeader.classList.remove('glow');
+    });
+</script>
