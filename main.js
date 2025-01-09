@@ -14,6 +14,19 @@ h3Elements.forEach((h3) => {
     });
 });
 
+const aboutHeading = document.querySelector('h2');
+
+aboutHeading.addEventListener('mouseover', () => {
+    aboutHeading.classList.add('sparkle');
+});
+
+aboutHeading.addEventListener('mouseout', () => {
+    aboutHeading.classList.remove('sparkle');
+});
+
+
+
+
 console.log("main.js loaded successfully!");
 
 
