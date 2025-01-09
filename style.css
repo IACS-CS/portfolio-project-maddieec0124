@@ -17,6 +17,7 @@ body {
     box-sizing: border-box;
     font-size: 20px;
     background: #dbdbdb;
+    cursor: none;
 }
 
 h1 {
@@ -176,6 +177,7 @@ main {
     background-color: #f0f0f0;
     border-radius: 20px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
     
 }
 
@@ -226,3 +228,18 @@ main {
     animation: sparkle 1.5s infinite ease-in-out;
     color: #ffffff; /* Makes the text stand out more during the sparkle */
 }
+
+
+
+.custom-cursor {
+    position: fixed;
+    width: 30px; 
+    height: 30px;
+    pointer-events: none; 
+    z-index: 1000;
+    transition: transform 0.1s ease; 
+      background: url('cursor.png') no-repeat center center;
+    background-size: cover;
+     
+}
+

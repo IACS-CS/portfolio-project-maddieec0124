@@ -25,6 +25,27 @@ aboutHeading.addEventListener('mouseout', () => {
 });
 
 
+// Create the custom cursor element
+const cursor = document.createElement('div');
+cursor.classList.add('custom-cursor');
+document.body.appendChild(cursor);
+
+// Update cursor position on mouse move
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+});
+
+// Optional: Add hover effects for specific elements
+const hoverElements = document.querySelectorAll('a, button, .hover-effect');
+hoverElements.forEach((el) => {
+    el.addEventListener('mouseover', () => {
+        cursor.style.transform = 'scale(1.5)'; // Enlarge cursor
+    });
+    el.addEventListener('mouseout', () => {
+        cursor.style.transform = 'scale(1)'; // Reset size
+    });
+});
 
 
 console.log("main.js loaded successfully!");
