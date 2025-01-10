@@ -20,6 +20,63 @@ body {
     cursor: none;
 }
 
+/* Fullscreen blurry background for loading screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark, semi-transparent background */
+  backdrop-filter: blur(5px); /* Blurry effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1; /* Fully visible by default */
+  transition: opacity 1s ease; /* Fades out over 1 second */
+}
+
+/* Centered content */
+#loading-content {
+  text-align: center;
+  color: white;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+}
+
+/* Progress bar container */
+#progress-bar {
+  margin-top: 10px;
+  width: 200px;
+  height: 10px;
+  background: #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Progress bar fill */
+#progress {
+  width: 0;
+  height: 100%;
+  background: #323b2d;
+  transition: width 0.3s ease;
+}
+
+/* Hide main content initially */
+#main-content {
+  display: none;
+}
+
+#loading-content p{
+    text-align: left;
+    margin-left: -17%;
+}
+#loading-screen.hidden {
+  opacity: 0; /* Fully transparent */
+  pointer-events: none; /* Prevent interaction after fade-out */
+}
+
 h1 {
     font-size: 60px;
       font-family: "Bodoni Moda SC", serif;
@@ -82,6 +139,8 @@ main {
 .about-me {
     flex: 1;
     max-width: 100%;
+    margin-top: 10%;
+    margin-left: 5%;
 }
 
 .about-photo {
@@ -176,7 +235,7 @@ main {
     padding: 1rem;
     background-color: #f0f0f0;
     border-radius: 20px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); 
 
     
 }

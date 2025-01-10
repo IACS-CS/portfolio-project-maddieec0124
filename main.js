@@ -1,3 +1,35 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const progressBar = document.getElementById("progress");
+    const loadingScreen = document.getElementById("loading-screen");
+    const mainContent = document.querySelector("main");
+
+    // Ensure main content is hidden at the start
+    mainContent.style.display = "none";
+
+    let progress = 0;
+
+    // Simulate progress
+    const interval = setInterval(() => {
+        progress += 10; // Increase progress by 10%
+        progressBar.style.width = progress + "%"; // Update progress bar width
+
+        if (progress >= 100) {
+            clearInterval(interval);
+
+            // Fade out loading screen
+            loadingScreen.classList.add("hidden");
+
+            // Show main content after fade-out
+            setTimeout(() => {
+                mainContent.style.display = "block";
+            }, 1000); // Wait for fade-out (1s) to complete
+        }
+    }, 300); // Update every 300ms
+});
+
+
+
+
 // Get all h2 elements on the page
 const h3Elements = document.querySelectorAll('h3');
 
