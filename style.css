@@ -229,7 +229,7 @@ main {
 .projects-section {
     position: absolute;
     width: 60%; 
-    margin-top: 70rem;
+    margin-top: 85rem;
     margin-left: 15%;
     text-align: center;
     padding: 1rem;
@@ -267,14 +267,19 @@ main {
     transition: all 0.3s ease;
     width: 50%;
     margin-left: 24%;
+    font-weight: 1500;
     
 }
 
 .project-links a:hover {
     background-color: #323b2d; 
     color: white; 
+    
 }
-
+.p2{
+    margin-left: 30px;
+    margin-right: 30px; 
+}
 @keyframes sparkle {
     0% { text-shadow: 0px 0px 5px #ffdf00, 0px 0px 10px #ff9d00; }
     25% { text-shadow: 0px 0px 15px #ff9d00, 0px 0px 20px #ffd700, 2px 2px 5px #ffffff; }
